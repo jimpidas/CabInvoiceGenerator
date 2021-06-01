@@ -9,6 +9,7 @@ namespace CabInvoiceGenerator
         private int numberOfRides;
         private double totalFare;
         private double averageFare;
+        private string userId;
         public InvoiceSummary(int numberOfRides, double totalFare)
         {
             this.numberOfRides = numberOfRides;
@@ -19,6 +20,13 @@ namespace CabInvoiceGenerator
         {
             this.numberOfRides = numberOfRides;
             this.totalFare = totalFare;
+            this.averageFare = this.totalFare / this.numberOfRides;
+        }
+        public InvoiceSummary(int numberOfRides, double totalFare, string userId)
+        {
+            this.numberOfRides = numberOfRides;
+            this.totalFare = totalFare;
+            this.userId = userId;
             this.averageFare = this.totalFare / this.numberOfRides;
         }
 
